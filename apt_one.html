@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="https://www.okand.info/index.html" class="w3-bar-item w3-button"><b>Okand</b> Management</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+       <a href="https://www.okand.info/properties" class="w3-bar-item w3-button">Properties</a>
+      <a href="https://www.okand.info/about.html" class="w3-bar-item w3-button">About</a>
+      <a href="https://www.okand.info/contactformspree.html" class="w3-bar-item w3-button">Contact</a>
+       <a href="https://www.okand.info.html" class="w3-bar-item w3-button">Info</a>
+    </div>
+  </div>
+</div>
+<div style="text-align:center">
+ <h2>Make Captol Hill is your new home!!</h2>
+  <p>This is the first time in 15yrs this apartment has been on the market. Pet friendly community, ready for a new tenant now..
+.</p>
+  <p>6 month lease</p>
+  <p>$1400/m<p>
+  <p>$500 deposit</p>
+  <p>Utilities not included<p>
+  <p>$190/m Parking<p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="apt_a_empty.png" alt="422 11th ave" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="apt_a_hallway.png" alt="422 11th ave" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="apt_b_bathroom.png" alt="422 11th ave" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="apt_b_empty.png" alt="422 11th ave" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+<div style="text-align:center">
+ <button class="w3-button w3-black w3-section" type="submit">
+	          <a href="https://www.okand.info/myformspree.html"><i class="fa fa-paper-plane"></i> APPLY NOW
+      </button>
+      </div>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

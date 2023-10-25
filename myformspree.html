@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>MyForm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        input {
+            margin: 10px;
+            padding: 10px;
+        }
+  button {
+    width: 100px;
+    height: 50px;
+    background-color: ##333333;
+  }
+</style>
+
+    </style>
+</head>
+
+<body>
+
+   <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="https://www.okand.info/index.html" class="w3-bar-item w3-button"><b>Okand</b> Management</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="https://www.okand.info/properties.html" class="w3-bar-item w3-button">Properties</a>
+      <a href="https://www.okand.info/about.html" class="w3-bar-item w3-button">About</a>
+      <a href="https://www.okand.info/contactformspree.html" class="w3-bar-item w3-button">Contact</a>
+       <a href="https://www.okand.info/info.html" class="w3-bar-item w3-button">Info</a>
+    </div>
+  </div>
+</div>
+
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <body style="text-align:center;">
+
+        <h1>Application Form</h1>
+
+        <br />
+
+
+        <form name="myForm" action="https://formspree.io/f/mpzeqpzq" method="POST" enctype="multipart/form-data" method="post" align="center">
+
+            <label style="display: block;">Name</label>
+
+
+            <input type="text" name="name" style="font-size:20px; color:black; padding: 10px;" />
+
+
+            <label style="display: block;">Email</label>
+            <input type="text" name="email" style="font-size:20px; color:black; padding: 10px;" />
+
+
+            <label style="display: block;">Password</label>
+
+
+            <input type="password" name="password" style="font-size:20px; color:black; padding: 10px;" />
+            
+            
+             <label style="display: block;">SSN</label>
+
+
+            <input type="password" name="SSN" style="font-size:20px; color:black; padding: 10px;" />
+
+            
+            
+          	<label style="display: block;">
+    			Rear DL:
+   		  	<input type="file" name="upload">
+  				</label>
+				<label style="display: block;">
+    			Front DL:
+   		  	<input type="file" name="upload">
+  				</label>
+
+            <label style="display: block;">Address</label>
+            <textarea rows="2" cols="30" placeholder="Type something here..." style="font-size:20px; color:black; padding: 10px;">
+</textarea>
+            <br/>
+            <input type="text" name="state" size="1" maxlength="2" pattern="[A-Za-z]{2}" placeholder="CA" required>
+            <input type="text" name="city" size="12" maxlength="30" pattern="[A-Za-z ]+" placeholder="Los Angeles" required>
+            <input type="text" name="zipcode" maxlength="5" size="5" pattern="\d{5}" placeholder="90210" required>
+            <br/>
+            <br />
+            <label style="display: block;">DOB</label>
+            <input type="date" id="date">
+
+            <br/>
+            <br />
+
+            <a href="http://www.okand.info/thankyou.html"><button>Next</button></a>
+        </form>
+
+    </body>
+
+</html>
